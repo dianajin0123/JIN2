@@ -65,6 +65,91 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+
+### Prerequisites
+
+Python 3.11.4
+
+Library: Requests, Pandas, Matplotlib, Chardet, IO 
+
+
+### Installation
+
+1. 터미널을 열고 다음 명령어를 실행하여 필요한 라이브러리를 설치합니다.
+   ```bash
+   pip install requests pandas matplotlib chardet
+   ```
+
+    이 명령어는 다음 라이브러리를 설치합니다:
+    - `requests`: HTTP 요청을 처리하기 위한 라이브러리
+    - `pandas`: 데이터 분석 및 조작을 위한 라이브러리
+    - `matplotlib`: 데이터 시각화를 위한 라이브러리
+    - `chardet`: 문자 인코딩 탐지를 위한 라이브러리
+
+
+
+
+
+2. Clone the repo
+   ```sh
+   git clone https://github.com/github_username/repo_name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [Python.js]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
