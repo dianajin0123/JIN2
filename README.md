@@ -5,7 +5,7 @@
 ![Stars](https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge)
 ![MIT License](https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](www.linkedin.com/in/daeun-jin-23a9b2285/)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555)](https://www.linkedin.com/in/daeunjin/)
 
 
 
