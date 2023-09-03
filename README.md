@@ -90,22 +90,15 @@ Library: Requests, Pandas, Matplotlib, Chardet, IO
     - `matplotlib`: 데이터 시각화를 위한 라이브러리
     - `chardet`: 문자 인코딩 탐지를 위한 라이브러리
 
-
-
-
-
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
+2. `Solar_Data_Analysis_Tool.py` 파일을 로컬 컴퓨터에 다운로드합니다.
+   
+4. 터미널을 열고 파일이 저장된 디렉토리로 이동합니다.
+   
+6. 다음 명령어를 실행하여 스크립트를 실행합니다.
+   ```bash
+   python Solar_Data_Analysis_Tool.py
    ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
