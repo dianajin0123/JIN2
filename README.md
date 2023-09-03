@@ -16,6 +16,8 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <ul>
+        <li><a href="#Python-Library">Python Library</a></li>
       </ul>
     </li>
     <li>
@@ -49,11 +51,33 @@
 ### Built With
 
 [![Python][Python.js]][Python-url]
+![Visual Studio Code][Visual Studio Code.js]
 
-[Python.js]: [https://example.com/image.png](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-[Python-url]: https://www.python.org
+#### Python Library
+
+![Requests][Requests.js]
+![Pandas][Pandas.js]
+![Matplotlib][Matplotlib.js]
+![Chardet][Chardet.js]
+![IO][IO.js]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+
+[Python.js]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Python-url]: https://www.python.org
+[Visual Studio Code.js]: https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white
+[Requests.js]: https://img.shields.io/badge/Requests-FFFF00?logoColor=white
+[Pandas.js]: https://img.shields.io/badge/Pandas-000000?logoColor=white
+[Matplotlib.js]: https://img.shields.io/badge/Matplotlib-00008B?logoColor=white
+[Chardet.js]: https://img.shields.io/badge/Chardet-006400?logoColor=white
+[IO.js]: https://img.shields.io/badge/IO-483D8B?logoColor=white
+
+
+
 
 
 
