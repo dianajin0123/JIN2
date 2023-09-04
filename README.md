@@ -31,17 +31,20 @@
     <li><a href="#usage">Usage</a></li>
     <ul>
         <li><a href="#Code-Overview">Code Overview</a></li>   
-        <li><a href="#Variables-and-Assumptions">Variables and Assumptions</a></li>   
-        <li><a href="#Papers-and-References">Papers and References</a></li>   
+        <li><a href="#Variables-and-Assumptions">Variables and Assumptions</a></li>
+        <ul>
+            <li><a href="#Default-Assumed-Values">Default Assumed Values</a></li>
+        </ul>
+        <li><a href="#Formula Descriptions">Formula Descriptions</a></li> 
+        <ul>
+            <li><a href="#DPapers and References">Papers and References</a></li>
     </ul>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#Data-Source-and-Acknowledgment">Data Source and Acknowledgment</a></li>
+    <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
 
 
 <!-- ABOUT THE PROJECT -->
@@ -134,7 +137,7 @@ Using the provided sample CSV file, the program will show the following outputs:
 ```bash
 1 Year - Total power generation: 160118.0 kWh
 1 Year - Expected income: 2561888.0 円
-1 Year - Surface Profit: 9.316 %
+1 Year - Surface Profit: 9.315 %
 ```
 
 1. Total solar power generation for one year
@@ -168,11 +171,18 @@ The sample data is based on Yokohama city's sunlight duration data from Septembe
 ### Code Overview
 This Python code aims to download and analyze solar power data from the Japan Meteorological Agency's website. The code consists of three main steps: data download, analysis, and visualization.
 
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 ### Variables and Assumptions
 
 #### Variables
+
 - `installed_capacity`: Installed solar panel capacity in kWh
-- `operating_rate `: The percentage of actual power output compared to the maximum possible output in percentage (%)
+- `operating_rate`: The percentage of actual power output compared to the maximum possible output in percentage (%)
 - `efficiency_coefficient`: Coefficient indicating the efficiency of the solar panel
 - `trading_price`: Trading price of solar power in yen (円)
 - `initial_investment`: Initial investment amount in yen (円)
@@ -184,92 +194,103 @@ This Python code aims to download and analyze solar power data from the Japan Me
 - `expected_income_1_year`: Expected income in one year in yen (円)
 - `surface_profit_1_year`: Surface profit rate in one year in percentage (%)
 
-#### Assumptions
+#### Default Assumed Values
+
+| Variable               | Default Value | Notes                         |
+|------------------------|---------------|-------------------------------|
+| `installed_capacity`   | 100 kWh       |                               |
+| `operating_rate`       | 1 (100%)      | Assumes full operation during sunlight hours |
+| `efficiency_coefficient` | 0.7         | [Based on papers](#efficiency-coefficient-reference) |
+| `trading_price`        | 16円          | [Based on Economic Industry site](#Trading-Price-Reference)  |
+| `initial_investment`   | 25.0万円/kW    | [Based on Economic Industry site](#Initial-Investment-Reference)  |
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Formula Descriptions
 
-Total Power Generation Calculation
+1. Total Power Generation Calculation：
 
-```bash
-annual_power_generation = annual_sunlight_duration_sum × installed_capacity × operating_rate × efficiency_coefficient
-```
+•This formula calculates the total power generated in a year.
 
-
+![equation](images/images/annual_power_generation.png)
 
 
+2. Expected Income Calculation:
 
+•This formula calculates the expected income in a year based on the total power generated and the trading price.
+
+![equation](images/images/expected_income.png)
+
+
+3. Surface Profit Rate Calculation:
+
+•This formula calculates the profit rate as a percentage of the initial investment.
+
+![equation](images/images/surface_profit.png)
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 ### Papers and References
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+- <a id="efficiency-coefficient-reference"></a>Efficiency Coefficient Reference: Seongcheol, Kim. (2018). *A study on natural condition variables applied calculation equation of prediction power generation amount for efficient usage of photovoltaic system* (Master's thesis). University of Yonsei, p. 15. [Retrieved from RISS](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=9327f1bbf8e1e678ffe0bdc3ef48d419&outLink=K)]
+- <a id="Trading-Price-Reference"></a>Trading Price Reference: [Economic Industry Site](https://www.meti.go.jp/press/2022/03/20230324004/20230324004.html)
+- <a id="Initial-Investment-Reference"></a>Initial Investment Reference: [Economic Industry Site](https://www.meti.go.jp/shingikai/santeii/pdf/073_01_00.pdf), p.25
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+We encourage community involvement and contributions. If you would like to contribute, please follow these steps:
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+1. **Fork the Project** - Fork the project repository to your own GitHub account.
+2. **Clone the Repository** - Clone the forked repository to your local machine.
+3. **Create a New Branch** - Create a new branch for your changes.
+4. **Make Changes** - Add or change the code in this branch.
+5. **Commit Changes** - Commit your changes with an appropriate message.
+6. **Open a Pull Request** - Open a pull request from your forked repository to the project repository.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+For more detailed information, please read our [Contribution Guide](CONTRIBUTING.md).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- CONTACT -->
 ## Contact
+
+For any inquiries, issues, or contributions, please contact:
 
 DAEUN JIN - dianajin0123@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [Solar Power Analysis Project](https://github.com/dianajin0123/JIN2/tree/main)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+We would like to extend our gratitude to:
+
+1. **Japan Meteorological Agency** - For providing the invaluable data used in this project.
+2. **Contributors** - For their dedication and hard work in the development of this project.
+3. **Open Source Community** - For providing the libraries and tools that made this project possible.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-   
-
-<!-- MARKDOWN LINKS & IMAGES -->
+   <!-- MARKDOWN LINKS & IMAGES -->
 
 [Python.js]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org
