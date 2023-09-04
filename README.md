@@ -181,7 +181,7 @@ This Python code aims to download and analyze solar power data from the Japan Me
 
 #### Variables
 
-- `installed_capacity`: Installed solar panel capacity in kW
+- `installed_capacity`: Installed solar panel capacity in (kW)
 - `operating_rate`: The percentage of actual power output compared to the maximum possible output in percentage (%)
 - `efficiency_coefficient`: Coefficient indicating the efficiency of the solar panel
 - `trading_price`: Trading price of solar power in yen (円)
