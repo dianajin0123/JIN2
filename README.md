@@ -1,4 +1,4 @@
-# 일본 기상청 태양광 분석 프로젝트
+# Japan Meteorological Agency Solar Power Analysis Project
 
 ![Contributors](https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge)
 ![Forks](https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge)
@@ -26,20 +26,20 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#Sample-Data-and-Web-Scraping-Caution">Sample Data and Web Scraping Caution</a></li>
-        <ul>
         <li><a href="#Example-Output-Using-Sample-Data">Example Output Using Sample Data</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <ul>
-        <li><a href="#Variables and Assumptions">Variables and Assumptions</a></li>   
-        <li><a href="#Papers and References">Papers and References</a></li>   
+        <li><a href="#Code-Overview">Code Overview</a></li>   
+        <li><a href="#Variables-and-Assumptions">Variables and Assumptions</a></li>   
+        <li><a href="#Papers-and-References">Papers and References</a></li>   
     </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#Data Source and Acknowledgment">Data Source and Acknowledgment</a></li>
+    <li><a href="#Data-Source-and-Acknowledgment">Data Source and Acknowledgment</a></li>
   </ol>
 </details>
 
@@ -47,9 +47,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-
-이 파이썬 스크립트는 일본 기상청의 웹사이트에서 일조 시간 데이터를 다운로드, 처리, 분석하며, 일조 데이터를 기반으로 태양광 패널 설치로 얻을 수 있는 연간 발전량,수익,표면이익을 계산하고 다양한 측면의 데이터를 그래프로 시각화합니다.
+This Python script downloads, processes, and analyzes sunlight duration data from the Japan Meteorological Agency's website. Based on the sunlight data, it calculates the annual power generation, income, and surface profit that can be obtained by installing solar panels and visualizes various aspects of the data through graphs.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -86,22 +84,22 @@ Library: Requests, Pandas, Matplotlib, Chardet, IO
 
 ### Installation
 
-1. 터미널을 열고 다음 명령어를 실행하여 필요한 라이브러리를 설치합니다.
+1. Open the terminal and run the following command to install the necessary libraries:
    ```bash
    pip install requests pandas matplotlib chardet
    ```
 
-    이 명령어는 다음 라이브러리를 설치합니다:
-    - `requests`: HTTP 요청을 처리하기 위한 라이브러리
-    - `pandas`: 데이터 분석 및 조작을 위한 라이브러리
-    - `matplotlib`: 데이터 시각화를 위한 라이브러리
-    - `chardet`: 문자 인코딩 탐지를 위한 라이브러리
+    This command installs the following libraries:
+    - `requests`: A library for handling HTTP requests
+    - `pandas`: A library for data analysis and manipulation
+    - `matplotlib`: A library for data visualization
+    - `chardet`: A library for character encoding detection
 
-2. `Solar_Data_Analysis_Tool.py` 파일을 로컬 컴퓨터에 다운로드합니다.
+2. Download the Solar_Data_Analysis_Tool.py file to your local computer.
    
-4. 터미널을 열고 파일이 저장된 디렉토리로 이동합니다.
+4. Open a terminal and navigate to the directory where the file is saved.
    
-6. 다음 명령어를 실행하여 스크립트를 실행합니다.
+6. Run the following command to execute the script:
    ```bash
    python Solar_Data_Analysis_Tool.py
    ```
@@ -113,18 +111,87 @@ Library: Requests, Pandas, Matplotlib, Chardet, IO
 
 ### Sample Data and Web Scraping Caution
 
-웹 스크래핑의 잠재적인 법적 및 윤리적 문제로 인해, 이 프로그램의 기능을 테스트하고 이해하기 위한 샘플 CSV 파일을 제공합니다. 샘플 데이터를 사용하려면 다음 단계를 따르십시오.
+Due to the potential legal and ethical issues of web scraping, a sample CSV file is provided for you to test and understand the functionality of the program. To use the sample data, follow these steps:
 
-1. [이 위치](샘플 파일 위치)에서 `sample.csv`를 다운로드합니다.
-2. 이 파일을 프로그램과 동일한 디렉토리에 배치합니다.
-3. [사용법](#사용법) 섹션에 설명된대로 프로그램을 실행합니다.
+1. Download the `data_sample.csv` from [this location](data_sample.csv).
+2. Place it in the same directory as the program.
+3. Run the program as described in the [Installation](#Installation) section.
 
-이 프로그램은 원래 웹에서 데이터를 스크래핑하기 위해 설계되었습니다. 이 기능을 사용하려면 해당 웹사이트의 이용 약관을 준수하고 있는지 확인하십시오.
-
-
+Please ensure you are in compliance with the terms of use of the website if you intend to use the web scraping feature.
 
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Example Output Using Sample Data
+
+#### Expected Outputs
+Using the provided sample CSV file, the program will show the following outputs:
+
+```bash
+1 Year - Total power generation: 160118.0 kWh
+1 Year - Expected income: 2561888.0 円
+1 Year - Surface Profit: 9.316 %
+```
+
+1. Total solar power generation for one year
+2. Expected income for one year
+3. Surface profit rate for one year
+
+
+#### Graphical Outputs
+
+Along with text-based results, the program also generates graphs.
+
+1. Daily Average Sunlight Duration: This graph shows the daily average duration of sunlight. It can be seen that the duration varies.
+2. Monthly Total Sunlight Duration: This graph shows the total duration of sunlight for each month, allowing for easy understanding of sunlight duration in each month. 
+3. Sunlight Duration Distribution: This histogram shows the distribution of sunlight durations. Most durations are close to 0, with very few outliers.
+4. Monthly Average Sunlight Duration: This graph shows the average duration of sunlight per month, allowing for easy understanding of monthly variations.
+
+> **Note**: You may see related warning messages while plotting the graphs. These are generally safe to ignore.
+
+#### Sample Data Information
+ 
+The sample data is based on Yokohama city's sunlight duration data from September 1, 2022, to September 1, 2023, provided by the Japan Meteorological Agency.
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## Usage
+
+### Code Overview
+This Python code aims to download and analyze solar power data from the Japan Meteorological Agency's website. The code consists of three main steps: data download, analysis, and visualization.
+
+### Variables and Assumptions
+
+#### Variables
+- `installed_capacity`: Installed solar panel capacity in kWh
+- `operating_rate `: The percentage of actual power output compared to the maximum possible output in percentage (%)
+- `efficiency_coefficient`: Coefficient indicating the efficiency of the solar panel
+- `trading_price`: Trading price of solar power in yen (円)
+- `initial_investment`: Initial investment amount in yen (円)
+- `df_1_year`: Dataframe containing data for one year
+- `monthly_avg_sunlight`: Monthly average sunlight duration
+- `daily_avg_sunlight`: Daily average sunlight duration
+- `monthly_total_sunlight`: Monthly total sunlight duration
+- `total_power_generation_1_year`: Total power generation in one year in kWh
+- `expected_income_1_year`: Expected income in one year in yen (円)
+- `surface_profit_1_year`: Surface profit rate in one year in percentage (%)
+
+#### Assumptions
+
+### Formula Descriptions
+
+Total Power Generation Calculation
+
+```bash
+annual_power_generation = annual_sunlight_duration_sum × installed_capacity × operating_rate × efficiency_coefficient
+```
 
 
 
@@ -133,36 +200,73 @@ Library: Requests, Pandas, Matplotlib, Chardet, IO
 
 
 
+### Papers and References
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Feature 1
+- [ ] Feature 2
+- [ ] Feature 3
+    - [ ] Nested Feature
+
+See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
+<!-- CONTACT -->
+## Contact
+
+DAEUN JIN - dianajin0123@gmail.com
+
+Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* []()
+* []()
+* []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
