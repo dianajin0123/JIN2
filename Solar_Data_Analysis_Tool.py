@@ -91,7 +91,7 @@ df_1_year = None
 # df_1_year = download_data('["2022","2022","1","12","1","31"]', '/mnt/data/data_1_year.csv')
 
 try:
-    df_1_year = pd.read_csv("data_1_year.csv", skiprows=3, encoding='cp932')
+    df_1_year = pd.read_csv("data_sample.csv", skiprows=3, encoding='cp932')
     if df_1_year.shape[1] == 5:
         df_1_year.columns = ['Timestamp', 'Sunlight Duration', 'Phenomenon Info', 'Quality Info', 'Homogeneous Number']
     else:
