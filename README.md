@@ -25,14 +25,21 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#Sample-Data-and-Web-Scraping-Caution">Sample Data and Web Scraping Caution</a></li>
+        <ul>
+        <li><a href="#Example-Output-Using-Sample-Data">Example Output Using Sample Data</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <ul>
+        <li><a href="#Variables and Assumptions">Variables and Assumptions</a></li>   
+        <li><a href="#Papers and References">Papers and References</a></li>   
+    </ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#Data Source and Acknowledgment">Data Source and Acknowledgment</a></li>
   </ol>
 </details>
 
@@ -101,6 +108,20 @@ Library: Requests, Pandas, Matplotlib, Chardet, IO
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Sample Data and Web Scraping Caution
+
+웹 스크래핑의 잠재적인 법적 및 윤리적 문제로 인해, 이 프로그램의 기능을 테스트하고 이해하기 위한 샘플 CSV 파일을 제공합니다. 샘플 데이터를 사용하려면 다음 단계를 따르십시오.
+
+1. [이 위치](샘플 파일 위치)에서 `sample.csv`를 다운로드합니다.
+2. 이 파일을 프로그램과 동일한 디렉토리에 배치합니다.
+3. [사용법](#사용법) 섹션에 설명된대로 프로그램을 실행합니다.
+
+이 프로그램은 원래 웹에서 데이터를 스크래핑하기 위해 설계되었습니다. 이 기능을 사용하려면 해당 웹사이트의 이용 약관을 준수하고 있는지 확인하십시오.
+
+
 
 
 
