@@ -37,7 +37,7 @@
         </ul>
         <li><a href="#Formula Descriptions">Formula Descriptions</a></li> 
         <ul>
-            <li><a href="#DPapers and References">Papers and References</a></li>
+            <li><a href="#Papers and References">Papers and References</a></li>
     </ul>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -66,7 +66,7 @@ This Python script downloads, processes, and analyzes sunlight duration data fro
 ![Pandas][Pandas.js]
 ![Matplotlib][Matplotlib.js]
 ![Chardet][Chardet.js]
-![IO][IO.js]
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -83,7 +83,7 @@ This Python script downloads, processes, and analyzes sunlight duration data fro
   Python 3.11.4
 
   
-  Library: Requests, Pandas, Matplotlib, Chardet, IO 
+  Library: Requests, Pandas, Matplotlib, Chardet
 
   ***
 
@@ -181,7 +181,7 @@ This Python code aims to download and analyze solar power data from the Japan Me
 
 #### Variables
 
-- `installed_capacity`: Installed solar panel capacity in kWh
+- `installed_capacity`: Installed solar panel capacity in kW
 - `operating_rate`: The percentage of actual power output compared to the maximum possible output in percentage (%)
 - `efficiency_coefficient`: Coefficient indicating the efficiency of the solar panel
 - `trading_price`: Trading price of solar power in yen (円)
@@ -198,7 +198,7 @@ This Python code aims to download and analyze solar power data from the Japan Me
 
 | Variable               | Default Value | Notes                         |
 |------------------------|---------------|-------------------------------|
-| `installed_capacity`   | 100 kWh       |                               |
+| `installed_capacity`   | 100 kW       |                               |
 | `operating_rate`       | 1 (100%)      | Assumes full operation during sunlight hours |
 | `efficiency_coefficient` | 0.7         | [Based on papers](#efficiency-coefficient-reference) |
 | `trading_price`        | 16円          | [Based on Economic Industry site](#Trading-Price-Reference)  |
