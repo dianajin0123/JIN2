@@ -23,7 +23,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#Sample-Data-and-Web-Scraping-Caution">Sample Data and Web Scraping Caution</a></li>
         <li><a href="#Example-Output-Using-Sample-Data">Example Output Using Sample Data</a></li>
@@ -75,14 +74,16 @@ This Python script downloads, processes, and analyzes sunlight duration data fro
 ## Getting Started
 
 
-### Prerequisites
-
-Python 3.11.4
-
-Library: Requests, Pandas, Matplotlib, Chardet, IO 
-
-
 ### Installation
+
+>#### Prerequisites
+  Python 3.11.4
+
+  
+  Library: Requests, Pandas, Matplotlib, Chardet, IO 
+
+  ***
+
 
 1. Open the terminal and run the following command to install the necessary libraries:
    ```bash
