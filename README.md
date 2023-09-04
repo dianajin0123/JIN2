@@ -287,7 +287,7 @@ We would like to extend our gratitude to:
 2. **Contributors** - For their dedication and hard work in the development of this project.
 3. **Open Source Community** - For providing the libraries and tools that made this project possible.
 
-For a full list of papers and references that contributed to this work, please refer to the ["Papers and References"](#[Papers-and-References]) section.
+For a full list of papers and references that contributed to this work, please refer to the ["Papers and References"](#Papers-and-References) section.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
