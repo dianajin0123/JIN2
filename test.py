@@ -63,7 +63,7 @@ def download_data(ymdList, filename):
         return None
 
     try:
-        df = pd.read_csv(io.StringIO(response.text), skiprows=3, encoding='cp932')
+        df = pd.read_csv(io.StringIO(response.text), skiprows=3,header=4, encoding='cp932')
         if df.shape[1] == 5:
             df.columns = ['Timestamp', 'Sunlight Duration', 'Phenomenon Info', 'Quality Info', 'Homogeneous Number']
         else:
@@ -81,18 +81,17 @@ def download_data(ymdList, filename):
 # Initialize parameters
 installed_capacity = 100  
 efficiency_coefficient = 0.7  
-operating_rate = 1
 trading_price = 16  
-initial_investment = 250000 * installed_capacity  
+initial_investment = 275000 * installed_capacity  
 
 # Download 1-month and 1-year data, then analyze
 df_1_month = None
 df_1_year = None
 # df_1_month = download_data('["2023","2023","8","9","1","1"]', 'data_1_month.csv')
-# df_1_year = download_data('["2022","2023","4","3","1","31"]', '/mnt/data/data_1_year.csv')
+# df_1_year = download_data('["2022","2022","1","12","1","31"]', '/mnt/data/data_1_year.csv')
 
 try:
-    df_1_year = pd.read_csv("data_sample.csv", skiprows=3, encoding='cp932')
+    df_1_year = pd.read_csv("data_sample.csv", skiprows=3,header=4, encoding='cp932')
     if df_1_year.shape[1] == 5:
         df_1_year.columns = ['Timestamp', 'Sunlight Duration', 'Phenomenon Info', 'Quality Info', 'Homogeneous Number']
     else:
@@ -105,7 +104,7 @@ except pd.errors.EmptyDataError:
 
 if df_1_year is not None:
     # total_power_generation_1_month = #df_1_month['Sunlight Duration'].sum() * installed_capacity * efficiency_coefficient
-    total_power_generation_1_year = df_1_year['Sunlight Duration'].sum() * installed_capacity * operating_rate * efficiency_coefficient
+    total_power_generation_1_year = df_1_year['Sunlight Duration'].sum() * installed_capacity * efficiency_coefficient
 
     # expected_income_1_month = total_power_generation_1_month * trading_price
     expected_income_1_year = total_power_generation_1_year * trading_price
