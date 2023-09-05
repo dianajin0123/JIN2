@@ -101,7 +101,7 @@ This Python script downloads, processes, and analyzes sunlight duration data fro
     - `matplotlib`: A library for data visualization
     - `chardet`: A library for character encoding detection
 
-2. Download the Solar_Data_Analysis_Tool.py file to your local computer.
+2. [Download](Solar_Data_Analysis_Tool.py) the Solar_Data_Analysis_Tool.py file to your local computer.
    
 4. Open a terminal and navigate to the directory where the file is saved.
    
@@ -137,9 +137,9 @@ Please ensure you are in compliance with the terms of use of the website if you 
 Using the provided sample CSV file, the program will show the following outputs:
 
 ```bash
-1 Year - Total power generation: 160118.0 kWh
-1 Year - Expected income: 2561888.0 円
-1 Year - Surface Profit: 9.315 %
+1 Year - Total power generation: 144193.0 kWh 
+1 Year - Expected income: 2307088.0 円
+1 Year - Surface Profit: 9.228 %
 ```
 
 1. Total solar power generation for one year
@@ -159,9 +159,8 @@ Along with text-based results, the program also generates graphs.
 > **Note**: You may see related warning messages while plotting the graphs. These are generally safe to ignore.
 
 #### Sample Data Information
- 
-The sample data is based on Yokohama city's sunlight duration data from September 1, 2022, to September 1, 2023, provided by the Japan Meteorological Agency.
 
+The sample data for this project is based on the sunlight duration data in Yokohama city from April 1, 2022, to March 31, 2023, provided by the Japan Meteorological Agency. This time frame is recommended for assessing annual solar power generation as it captures the variability across all four seasons in Japan and minimizes the impact of typhoon seasons on solar output.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
