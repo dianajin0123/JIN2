@@ -244,7 +244,7 @@ This Python code aims to download and analyze solar power data from the Japan Me
 
 
 
-### Papers and References
+## Papers and References
 
 - <a id="Total-Power-Generation-Calculation"></a>Total Power Generation Calculation Formula Reference: Yeonju, A., Taekkie, L., & Kyuho, k. (2021). *Prediction of Photovoltaic Power Generation Based on LSTM Considering Daylight and Solar Radiation Data*. Journal of Electrical Engineering Association, p.1098. [Retrieved from KCI](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002742867)
 - <a id="efficiency-coefficient-reference"></a>Efficiency Coefficient Reference: Seongcheol, Kim. (2018). *A study on natural condition variables applied calculation equation of prediction power generation amount for efficient usage of photovoltaic system* (Master's thesis). University of Yonsei, p. 15. [Retrieved from RISS](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=9327f1bbf8e1e678ffe0bdc3ef48d419&outLink=K)
