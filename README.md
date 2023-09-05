@@ -19,7 +19,8 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
         <ul>
-        <li><a href="#Python-Library">Python Library</a></li>
+          <li><a href="#Python-Library">Python Library</a></li>
+        </ul>
       </ul>
     </li>
     <li>
@@ -30,17 +31,18 @@
         <li><a href="#Example-Output-Using-Sample-Data">Example Output Using Sample Data</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <ul>
-        <li><a href="#Code-Overview">Code Overview</a></li>   
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#Code-Overview">Code Overview</a></li>
         <li><a href="#Variables-and-Assumptions">Variables and Assumptions</a></li>
         <ul>
-            <li><a href="#Default-Assumed-Values">Default Assumed Values</a></li>
+          <li><a href="#Default-Assumed-Values">Default Assumed Values</a></li>
         </ul>
-        <li><a href="#Formula-Descriptions">Formula Descriptions</a></li> 
-        <ul>
-            <li><a href="#Papers-and-References">Papers and References</a></li>
-    </ul>
+        <li><a href="#Formula-Descriptions">Formula Descriptions</a></li>
+      </ul>
+    </li>
+    <li><a href="#Papers-and-References">Papers and References</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
