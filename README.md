@@ -211,27 +211,33 @@ This Python code aims to download and analyze solar power data from the Japan Me
 
 ### Formula Descriptions
 
-1. Total Power Generation Calculation：
+1. **Total Power Generation Calculation**:  
+   - This formula calculates the total power generated in a year.
 
-•This formula calculates the total power generated in a year.
+   ![equation](images/images/annual_power_generation.png)
 
-![equation](images/images/annual_power_generation.png)
+   <details>
+     <summary>About this formula</summary>
 
+     1. **Original Total Power Generation Calculation**: [Based on papers](#Total-Power-Generation-Calculation)
+        
+        ![equation](images/images/original_formula.png)
 
-2. Expected Income Calculation:
+     2. **Efficiency Coefficient**: However, the formula may not account for various factors such as equipment aging, weather conditions, or technological efficiency. To improve accuracy, we introduce an "Efficiency Coefficient". In this formula, the value is set to 0.7. [Based on papers](#efficiency-coefficient-reference)
 
-•This formula calculates the expected income in a year based on the total power generated and the trading price.
+        ![equation](images/images/Efficiency_Coefficient.png)
 
-![equation](images/images/expected_income.png)
+   </details>
 
+2. **Expected Income Calculation**:  
+   - This formula calculates the expected income in a year based on the total power generated and the trading price.
 
-3. Surface Profit Rate Calculation:
+   ![equation](images/images/expected_income.png)
 
-•This formula calculates the profit rate as a percentage of the initial investment.
+3. **Surface Profit Rate Calculation**:  
+   - This formula calculates the profit rate as a percentage of the initial investment.
 
-![equation](images/images/surface_profit.png)
-
-
+   ![equation](images/images/surface_profit.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -239,7 +245,8 @@ This Python code aims to download and analyze solar power data from the Japan Me
 
 ### Papers and References
 
-- <a id="efficiency-coefficient-reference"></a>Efficiency Coefficient Reference: Seongcheol, Kim. (2018). *A study on natural condition variables applied calculation equation of prediction power generation amount for efficient usage of photovoltaic system* (Master's thesis). University of Yonsei, p. 15. [Retrieved from RISS](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=9327f1bbf8e1e678ffe0bdc3ef48d419&outLink=K)]
+- <a id="Total-Power-Generation-Calculation"></a>Total Power Generation Calculation Formula Reference: Yeonju, A., Taekkie, L., & Kyuho, k. (2021). *Prediction of Photovoltaic Power Generation Based on LSTM Considering Daylight and Solar Radiation Data*. Journal of Electrical Engineering Association, p.1098. [Retrieved from KCI](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002742867)
+- <a id="efficiency-coefficient-reference"></a>Efficiency Coefficient Reference: Seongcheol, Kim. (2018). *A study on natural condition variables applied calculation equation of prediction power generation amount for efficient usage of photovoltaic system* (Master's thesis). University of Yonsei, p. 15. [Retrieved from RISS](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=9327f1bbf8e1e678ffe0bdc3ef48d419&outLink=K)
 - <a id="Trading-Price-Reference"></a>Trading Price Reference: [Economic Industry Site](https://www.meti.go.jp/press/2022/03/20230324004/20230324004.html)
 - <a id="Initial-Investment-Reference"></a>Initial Investment Reference: [Economic Industry Site](https://www.meti.go.jp/shingikai/santeii/pdf/073_01_00.pdf), p.25
 
@@ -292,6 +299,22 @@ We would like to extend our gratitude to:
 For a full list of papers and references that contributed to this work, please refer to the ["Papers and References"](#Papers-and-References) section.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+### Formula Descriptions
+
+#### 1. Total Power Generation Calculation
+
+##### Original Formula
+
+
+
+
+
+
 
 
    <!-- MARKDOWN LINKS & IMAGES -->
