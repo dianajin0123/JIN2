@@ -154,9 +154,20 @@ Using the provided sample CSV file, the program will show the following outputs:
 Along with text-based results, the program also generates graphs.
 
 1. Daily Average Sunlight Duration: This graph shows the daily average duration of sunlight. It can be seen that the duration varies.
-2. Monthly Total Sunlight Duration: This graph shows the total duration of sunlight for each month, allowing for easy understanding of sunlight duration in each month. 
+   
+   <img src="images/images/Daily_Average_Sunlight_Duration.png" width="400" style="display: block; margin: auto;">
+
+2. Monthly Total Sunlight Duration: This graph shows the total duration of sunlight for each month, allowing for easy understanding of sunlight duration in each month.
+
+   <img src="images/images/Monthly_Total_Sunlight_Duration.png" width="400" style="display: block; margin: auto;">
+   
 3. Sunlight Duration Distribution: This histogram shows the distribution of sunlight durations. Most durations are close to 0, with very few outliers.
+
+   <img src="images/images/Sunlight_Duration_Distribution.png" width="400">
+   
 4. Monthly Average Sunlight Duration: This graph shows the average duration of sunlight per month, allowing for easy understanding of monthly variations.
+
+   <img src="images/images/Monthly_Average_Sunlight_Duration.png" width="400">
 
 > **Note**: You may see related warning messages while plotting the graphs. These are generally safe to ignore.
 
