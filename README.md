@@ -283,7 +283,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 For any inquiries, issues, or contributions, please contact:
 
-DAEUN JIN - dianajin0123@gmail.com
+DAEUN JIN - [📧](mailto:daeunjin0123@gmail.com)
 
 Project Link: [Solar Power Analysis Project](https://github.com/dianajin0123/JIN2/tree/main)
 
