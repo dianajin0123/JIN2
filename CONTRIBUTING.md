@@ -97,7 +97,7 @@ After the review process, your changes will be merged into the main codebase. Co
 
 ### Acknowledgments
 
-Thank you for taking the time to read our contributing guide. Your efforts to contribute are highly appreciated by the community. Feel free to [contact us](#contact) for any additional information or clarification.
+Thank you for taking the time to read our contributing guide. Your efforts to contribute are highly appreciated by the community. Feel free to [contact us](daeunjin0123@gmail.com) for any additional information or clarification.
 
 Happy coding!
 
