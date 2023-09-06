@@ -19,7 +19,8 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
         <ul>
-        <li><a href="#Python-Library">Python Library</a></li>
+          <li><a href="#Python-Library">Python Library</a></li>
+        </ul>
       </ul>
     </li>
     <li>
@@ -30,17 +31,18 @@
         <li><a href="#Example-Output-Using-Sample-Data">Example Output Using Sample Data</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <ul>
-        <li><a href="#Code-Overview">Code Overview</a></li>   
+    <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#Code-Overview">Code Overview</a></li>
         <li><a href="#Variables-and-Assumptions">Variables and Assumptions</a></li>
         <ul>
-            <li><a href="#Default-Assumed-Values">Default Assumed Values</a></li>
+          <li><a href="#Default-Assumed-Values">Default Assumed Values</a></li>
         </ul>
-        <li><a href="#Formula-Descriptions">Formula Descriptions</a></li> 
-        <ul>
-            <li><a href="#Papers-and-References">Papers and References</a></li>
-    </ul>
+        <li><a href="#Formula-Descriptions">Formula Descriptions</a></li>
+      </ul>
+    </li>
+    <li><a href="#Papers-and-References">Papers and References</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -101,7 +103,7 @@ This Python script downloads, processes, and analyzes sunlight duration data fro
     - `matplotlib`: A library for data visualization
     - `chardet`: A library for character encoding detection
 
-2. Download the Solar_Data_Analysis_Tool.py file to your local computer.
+2. [Download](Solar_Data_Analysis_Tool.py) the Solar_Data_Analysis_Tool.py file to your local computer.
    
 4. Open a terminal and navigate to the directory where the file is saved.
    
@@ -137,9 +139,9 @@ Please ensure you are in compliance with the terms of use of the website if you 
 Using the provided sample CSV file, the program will show the following outputs:
 
 ```bash
-1 Year - Total power generation: 160118.0 kWh
-1 Year - Expected income: 2561888.0 円
-1 Year - Surface Profit: 9.315 %
+1 Year - Total power generation: 144193.0 kWh 
+1 Year - Expected income: 2307088.0 円
+1 Year - Surface Profit: 9.228 %
 ```
 
 1. Total solar power generation for one year
@@ -159,9 +161,8 @@ Along with text-based results, the program also generates graphs.
 > **Note**: You may see related warning messages while plotting the graphs. These are generally safe to ignore.
 
 #### Sample Data Information
- 
-The sample data is based on Yokohama city's sunlight duration data from September 1, 2022, to September 1, 2023, provided by the Japan Meteorological Agency.
 
+The sample data for this project is based on the sunlight duration data in Yokohama city from April 1, 2022, to March 31, 2023, provided by the Japan Meteorological Agency. This time frame is recommended for assessing annual solar power generation as it captures the variability across all four seasons in Japan and minimizes the impact of typhoon seasons on solar output.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -243,7 +244,7 @@ This Python code aims to download and analyze solar power data from the Japan Me
 
 
 
-### Papers and References
+## Papers and References
 
 - <a id="Total-Power-Generation-Calculation"></a>Total Power Generation Calculation Formula Reference: Yeonju, A., Taekkie, L., & Kyuho, k. (2021). *Prediction of Photovoltaic Power Generation Based on LSTM Considering Daylight and Solar Radiation Data*. Journal of Electrical Engineering Association, p.1098. [Retrieved from KCI](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002742867)
 - <a id="efficiency-coefficient-reference"></a>Efficiency Coefficient Reference: Seongcheol, Kim. (2018). *A study on natural condition variables applied calculation equation of prediction power generation amount for efficient usage of photovoltaic system* (Master's thesis). University of Yonsei, p. 15. [Retrieved from RISS](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=9327f1bbf8e1e678ffe0bdc3ef48d419&outLink=K)
@@ -282,7 +283,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 For any inquiries, issues, or contributions, please contact:
 
-DAEUN JIN - dianajin0123@gmail.com
+DAEUN JIN - [📧](mailto:daeunjin0123@gmail.com)
 
 Project Link: [Solar Power Analysis Project](https://github.com/dianajin0123/JIN2/tree/main)
 
