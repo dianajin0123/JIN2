@@ -1,4 +1,6 @@
-# 일본 기상청 태양광 분석 프로젝트
+<a id="readme-top"></a>
+
+# Japan Meteorological Agency Solar Power Analysis Project
 
 ![Contributors](https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge)
 ![Forks](https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge)
@@ -23,33 +25,33 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
         <li><a href="#Sample-Data-and-Web-Scraping-Caution">Sample Data and Web Scraping Caution</a></li>
-        <ul>
         <li><a href="#Example-Output-Using-Sample-Data">Example Output Using Sample Data</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <ul>
-        <li><a href="#Variables and Assumptions">Variables and Assumptions</a></li>   
-        <li><a href="#Papers and References">Papers and References</a></li>   
+        <li><a href="#Code-Overview">Code Overview</a></li>   
+        <li><a href="#Variables-and-Assumptions">Variables and Assumptions</a></li>
+        <ul>
+            <li><a href="#Default-Assumed-Values">Default Assumed Values</a></li>
+        </ul>
+        <li><a href="#Formula-Descriptions">Formula Descriptions</a></li> 
+        <ul>
+            <li><a href="#Papers-and-References">Papers and References</a></li>
     </ul>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#Data Source and Acknowledgment">Data Source and Acknowledgment</a></li>
+    <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-
-이 파이썬 스크립트는 일본 기상청의 웹사이트에서 일조 시간 데이터를 다운로드, 처리, 분석하며, 일조 데이터를 기반으로 태양광 패널 설치로 얻을 수 있는 연간 발전량,수익,표면이익을 계산하고 다양한 측면의 데이터를 그래프로 시각화합니다.
+This Python script downloads, processes, and analyzes sunlight duration data from the Japan Meteorological Agency's website. Based on the sunlight data, it calculates the annual power generation, income, and surface profit that can be obtained by installing solar panels and visualizes various aspects of the data through graphs.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -66,7 +68,7 @@
 ![Pandas][Pandas.js]
 ![Matplotlib][Matplotlib.js]
 ![Chardet][Chardet.js]
-![IO][IO.js]
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -77,31 +79,33 @@
 ## Getting Started
 
 
-### Prerequisites
-
-Python 3.11.4
-
-Library: Requests, Pandas, Matplotlib, Chardet, IO 
-
-
 ### Installation
 
-1. 터미널을 열고 다음 명령어를 실행하여 필요한 라이브러리를 설치합니다.
+>#### Prerequisites
+  Python 3.11.4
+
+  
+  Library: Requests, Pandas, Matplotlib, Chardet
+
+  ***
+
+
+1. Open the terminal and run the following command to install the necessary libraries:
    ```bash
    pip install requests pandas matplotlib chardet
    ```
 
-    이 명령어는 다음 라이브러리를 설치합니다:
-    - `requests`: HTTP 요청을 처리하기 위한 라이브러리
-    - `pandas`: 데이터 분석 및 조작을 위한 라이브러리
-    - `matplotlib`: 데이터 시각화를 위한 라이브러리
-    - `chardet`: 문자 인코딩 탐지를 위한 라이브러리
+    This command installs the following libraries:
+    - `requests`: A library for handling HTTP requests
+    - `pandas`: A library for data analysis and manipulation
+    - `matplotlib`: A library for data visualization
+    - `chardet`: A library for character encoding detection
 
-2. `Solar_Data_Analysis_Tool.py` 파일을 로컬 컴퓨터에 다운로드합니다.
+2. Download the Solar_Data_Analysis_Tool.py file to your local computer.
    
-4. 터미널을 열고 파일이 저장된 디렉토리로 이동합니다.
+4. Open a terminal and navigate to the directory where the file is saved.
    
-6. 다음 명령어를 실행하여 스크립트를 실행합니다.
+6. Run the following command to execute the script:
    ```bash
    python Solar_Data_Analysis_Tool.py
    ```
@@ -113,58 +117,194 @@ Library: Requests, Pandas, Matplotlib, Chardet, IO
 
 ### Sample Data and Web Scraping Caution
 
-웹 스크래핑의 잠재적인 법적 및 윤리적 문제로 인해, 이 프로그램의 기능을 테스트하고 이해하기 위한 샘플 CSV 파일을 제공합니다. 샘플 데이터를 사용하려면 다음 단계를 따르십시오.
+Due to the potential legal and ethical issues of web scraping, a sample CSV file is provided for you to test and understand the functionality of the program. To use the sample data, follow these steps:
 
-1. [이 위치](샘플 파일 위치)에서 `sample.csv`를 다운로드합니다.
-2. 이 파일을 프로그램과 동일한 디렉토리에 배치합니다.
-3. [사용법](#사용법) 섹션에 설명된대로 프로그램을 실행합니다.
+1. Download the `data_sample.csv` from [this location](data_sample.csv).
+2. Place it in the same directory as the program.
+3. Run the program as described in the [Installation](#Installation) section.
 
-이 프로그램은 원래 웹에서 데이터를 스크래핑하기 위해 설계되었습니다. 이 기능을 사용하려면 해당 웹사이트의 이용 약관을 준수하고 있는지 확인하십시오.
-
-
+Please ensure you are in compliance with the terms of use of the website if you intend to use the web scraping feature.
 
 
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Example Output Using Sample Data
+
+#### Expected Outputs
+Using the provided sample CSV file, the program will show the following outputs:
+
+```bash
+1 Year - Total power generation: 160118.0 kWh
+1 Year - Expected income: 2561888.0 円
+1 Year - Surface Profit: 9.315 %
+```
+
+1. Total solar power generation for one year
+2. Expected income for one year
+3. Surface profit rate for one year
+
+
+#### Graphical Outputs
+
+Along with text-based results, the program also generates graphs.
+
+1. Daily Average Sunlight Duration: This graph shows the daily average duration of sunlight. It can be seen that the duration varies.
+2. Monthly Total Sunlight Duration: This graph shows the total duration of sunlight for each month, allowing for easy understanding of sunlight duration in each month. 
+3. Sunlight Duration Distribution: This histogram shows the distribution of sunlight durations. Most durations are close to 0, with very few outliers.
+4. Monthly Average Sunlight Duration: This graph shows the average duration of sunlight per month, allowing for easy understanding of monthly variations.
+
+> **Note**: You may see related warning messages while plotting the graphs. These are generally safe to ignore.
+
+#### Sample Data Information
+ 
+The sample data is based on Yokohama city's sunlight duration data from September 1, 2022, to September 1, 2023, provided by the Japan Meteorological Agency.
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## Usage
+
+### Code Overview
+This Python code aims to download and analyze solar power data from the Japan Meteorological Agency's website. The code consists of three main steps: data download, analysis, and visualization.
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Variables and Assumptions
+
+#### Variables
+
+- `installed_capacity`: Installed solar panel capacity in (kW)
+- `operating_rate`: The percentage of actual power output compared to the maximum possible output in percentage (%)
+- `efficiency_coefficient`: Coefficient indicating the efficiency of the solar panel
+- `trading_price`: Trading price of solar power in yen (円)
+- `initial_investment`: Initial investment amount in yen (円)
+- `df_1_year`: Dataframe containing data for one year
+- `monthly_avg_sunlight`: Monthly average sunlight duration
+- `daily_avg_sunlight`: Daily average sunlight duration
+- `monthly_total_sunlight`: Monthly total sunlight duration
+- `total_power_generation_1_year`: Total power generation in one year in kWh
+- `expected_income_1_year`: Expected income in one year in yen (円)
+- `surface_profit_1_year`: Surface profit rate in one year in percentage (%)
+
+#### Default Assumed Values
+
+| Variable               | Default Value | Notes                         |
+|------------------------|---------------|-------------------------------|
+| `installed_capacity`   | 100 kW       |                               |
+| `operating_rate`       | 1 (100%)      | Assumes full operation during sunlight hours |
+| `efficiency_coefficient` | 0.7         | [Based on papers](#efficiency-coefficient-reference) |
+| `trading_price`        | 16円          | [Based on Economic Industry site](#Trading-Price-Reference)  |
+| `initial_investment`   | 25.0万円/kW    | [Based on Economic Industry site](#Initial-Investment-Reference)  |
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Formula Descriptions
+
+1. **Total Power Generation Calculation**:  
+   - This formula calculates the total power generated in a year.
+
+   ![equation](images/images/annual_power_generation.png)
+
+   <details>
+     <summary>About this formula</summary>
+
+     1. **Original Total Power Generation Calculation**: [Based on papers](#Total-Power-Generation-Calculation)
+        
+        ![equation](images/images/original_formula.png)
+
+     2. **Efficiency Coefficient**: However, the formula may not account for various factors such as equipment aging, weather conditions, or technological efficiency. To improve accuracy, we introduce an "Efficiency Coefficient". In this formula, the value is set to 0.7. [Based on papers](#efficiency-coefficient-reference)
+
+        ![equation](images/images/Efficiency_Coefficient.png)
+
+   </details>
+
+2. **Expected Income Calculation**:  
+   - This formula calculates the expected income in a year based on the total power generated and the trading price.
+
+   ![equation](images/images/expected_income.png)
+
+3. **Surface Profit Rate Calculation**:  
+   - This formula calculates the profit rate as a percentage of the initial investment.
+
+   ![equation](images/images/surface_profit.png)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+### Papers and References
+
+- <a id="Total-Power-Generation-Calculation"></a>Total Power Generation Calculation Formula Reference: Yeonju, A., Taekkie, L., & Kyuho, k. (2021). *Prediction of Photovoltaic Power Generation Based on LSTM Considering Daylight and Solar Radiation Data*. Journal of Electrical Engineering Association, p.1098. [Retrieved from KCI](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002742867)
+- <a id="efficiency-coefficient-reference"></a>Efficiency Coefficient Reference: Seongcheol, Kim. (2018). *A study on natural condition variables applied calculation equation of prediction power generation amount for efficient usage of photovoltaic system* (Master's thesis). University of Yonsei, p. 15. [Retrieved from RISS](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=9327f1bbf8e1e678ffe0bdc3ef48d419&outLink=K)
+- <a id="Trading-Price-Reference"></a>Trading Price Reference: [Economic Industry Site](https://www.meti.go.jp/press/2022/03/20230324004/20230324004.html)
+- <a id="Initial-Investment-Reference"></a>Initial Investment Reference: [Economic Industry Site](https://www.meti.go.jp/shingikai/santeii/pdf/073_01_00.pdf), p.25
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## Contributing
+
+We encourage community involvement and contributions. If you would like to contribute, please follow these steps:
+
+1. **Fork the Project** - Fork the project repository to your own GitHub account.
+2. **Clone the Repository** - Clone the forked repository to your local machine.
+3. **Create a New Branch** - Create a new branch for your changes.
+4. **Make Changes** - Add or change the code in this branch.
+5. **Commit Changes** - Commit your changes with an appropriate message.
+6. **Open a Pull Request** - Open a pull request from your forked repository to the project repository.
+
+For more detailed information, please read our [Contribution Guide](CONTRIBUTING.md).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Contact
+
+For any inquiries, issues, or contributions, please contact:
+
+DAEUN JIN - dianajin0123@gmail.com
+
+Project Link: [Solar Power Analysis Project](https://github.com/dianajin0123/JIN2/tree/main)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments
+
+We would like to extend our gratitude to:
+
+1. **Japan Meteorological Agency** - For providing the invaluable data used in this project.
+2. **Contributors** - For their dedication and hard work in the development of this project.
+3. **Open Source Community** - For providing the libraries and tools that made this project possible.
+
+For a full list of papers and references that contributed to this work, please refer to the ["Papers and References"](#Papers-and-References) section.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
+ <!-- MARKDOWN LINKS & IMAGES -->
 
 [Python.js]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
 [Python-url]: https://www.python.org

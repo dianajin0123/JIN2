@@ -63,7 +63,7 @@ def download_data(ymdList, filename):
         return None
 
     try:
-        df = pd.read_csv(io.StringIO(response.text), skiprows=3, encoding='cp932')
+        df = pd.read_csv(io.StringIO(response.text), skiprows=2, header=1, encoding='cp932')
         if df.shape[1] == 5:
             df.columns = ['Timestamp', 'Sunlight Duration', 'Phenomenon Info', 'Quality Info', 'Homogeneous Number']
         else:
@@ -92,7 +92,9 @@ df_1_year = None
 # df_1_year = download_data('["2022","2023","4","3","1","31"]', '/mnt/data/data_1_year.csv')
 
 try:
-    df_1_year = pd.read_csv("data_sample.csv", skiprows=3, encoding='cp932')
+    df_1_year = pd.read_csv("data_sample.csv", skiprows=2, header=1, encoding='cp932')
+    df_1_year.rename(columns={'年月日時': 'Timestamp', '日照時間(時間)': 'Sunlight Duration'}, inplace=True)
+    df_1_year.index = pd.to_datetime(df_1_year['Timestamp'])
     if df_1_year.shape[1] == 5:
         df_1_year.columns = ['Timestamp', 'Sunlight Duration', 'Phenomenon Info', 'Quality Info', 'Homogeneous Number']
     else:
